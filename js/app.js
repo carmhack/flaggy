@@ -81,10 +81,10 @@ const flagTypeOptions = [
         label: 'Tricolor',
         value: 'Tricolor',
     },
-    {
+    /*{
         label: 'Striped',
         value: 'Striped'
-    }
+    }*/
 ];
 
 const flagOrientationOptions = [
@@ -150,7 +150,7 @@ function drawFlag() {
         noStroke();
         if (orientation === 'Vertical') {
             rect(verticalBandWidth * i, 0, verticalBandWidth, HEIGHT);
-        } else {
+        } else if (orientation === 'Horizontal') {
             rect(0, horizontalBandHeight * i, WIDTH, horizontalBandHeight);
         }
         if (showCoatOfArms()) {
@@ -181,7 +181,7 @@ function generateBandsColorInput() {
     colorsContainer.innerHTML = "";
     for (let i = 0; i < flag.bands; i++) {
         const field = document.createElement('div');
-        field.classList.add('field');
+        field.classList.add(['field', 'column', 'is-2']);
         const label = document.createElement('label');
         label.classList.add('label');
         label.innerText = `#${i+1} Band Color`;
