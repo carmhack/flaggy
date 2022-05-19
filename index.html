@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flaggy</title>
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="hero is-dark is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Flaggy
+            </h1>
+            <h2 class="subtitle">
+              A flag generator with JavaScript
+            </h2>
+          </div>
+        </div>
+    </section>
+
+    <section id="container" class="section has-text-centered">
+        <div class="columns">
+            <div class="column">
+                <div id="colors"></div>
+            </div>
+            <div class="column">
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="field">
+                        <label class="label">Bands</label>
+                        <div class="control">
+                            <input id="flag-bands" class="input" type="number" min="1" max="10" placeholder="3">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Type</label>
+                        <div class="select">
+                            <select id="flag-type"></select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Orientation</label>
+                        <div class="select">
+                            <select id="flag-orientation"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-grouped is-grouped-centered">
+                    <p class="control">
+                        <div class="field">
+                            <label class="checkbox">
+                                <input id="show-coat" type="checkbox">
+                                Show coat of arms
+                            </label>
+                        </div>
+                    </p>
+                    <p class="control">
+                        <div class="field">
+                            <div class="select">
+                                <select id="flag-coat"></select>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <button id="export-btn" class="button is-dark">Export to PNG</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Made by <a href="https://github.com/carmhack">Adriano Grimaldi</a>
+          </p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
