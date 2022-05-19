@@ -1,4 +1,5 @@
 # Flaggy
+Demo: https://dazzling-kashata-4dd04a.netlify.app/
 A flag generator made with JavaScript and P5.
 
 ### What you can do
